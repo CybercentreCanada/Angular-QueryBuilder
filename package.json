@@ -91,6 +91,7 @@
     "zone.js": "~0.10.2"
   },
   "dependencies": {
+    "chrono-node": "^2.1.9",
     "tslib": "^1.10.0"
   }
 }
