@@ -5,9 +5,9 @@ import * as chrono from 'chrono-node';
 @Component({
   selector: 'chrono-date',
   template: `
-  <input #txt="ngModel" type="text" [(ngModel)]="text" (change)="textUpdate($event)" >
+  <input #txt="ngModel" type="text" [(ngModel)]="text" (change)="textUpdate($event)">
   <input #cal="ngModel" type="date" [(ngModel)]="date" (change)="calendarUpdate($event)">
-  <span class="chrono-alert" *ngIf="!textValid && txt.touched">Unable to parse text</span>
+  <span class="chrono-alert" *ngIf="!textValid && txt.touched">Unable to parse date</span>
   `,
   styles: [`
   .chrono-alert {
