@@ -81,7 +81,6 @@ import * as chrono from 'chrono-node';
     position: relative;
   }
   
-  
   .chrono-alert {
     color: red;
     margin: 0 10px;
@@ -114,17 +113,6 @@ export class ChronoDateComponent implements OnInit, ControlValueAccessor {
   }
 
   textUpdate($event) {
-    // let parsed = chrono.parse(this.text);
-    // if (parsed.length > 0) {
-    //   this.textValid = true;
-    //   let date = parsed[0].date().toISOString().slice(0,10);
-    //   this.date = date;
-    //   this.onChange(this.date);
-    // } else {
-    //   this.textValid = false;
-    //   this.date = '';
-    //   this.onChange(this.date);
-    // }
     let parsed = chrono.parse(this.text);
     if (parsed.length > 0) {
       this.textValid = true;
@@ -142,7 +130,6 @@ export class ChronoDateComponent implements OnInit, ControlValueAccessor {
   calendarUpdate($event) {
     console.log("hello");
     this.textValid = true;
-    // this.text = '';
     this.text = this.date;
     this.onChange(this.date);
   }
