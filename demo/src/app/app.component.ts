@@ -222,8 +222,7 @@ export class AppComponent {
     condition: 'and',
     rules: [
       {field: 'age', operator: '<=', entity: 'physical'},
-      // {field: 'birthday', operator: '=', value: new Date(), entity: 'nonphysical'},
-      {field: 'birthday', operator: '=', entity:'nonphysical'},
+      {field: 'birthday', operator: '=', value: new Date(), entity: 'nonphysical'},
       {
         condition: 'or',
         rules: [
