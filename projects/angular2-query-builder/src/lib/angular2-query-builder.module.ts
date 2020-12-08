@@ -13,6 +13,7 @@ import { QueryButtonGroupDirective } from './query-builder/query-button-group.di
 import { QuerySwitchGroupDirective } from './query-builder/query-switch-group.directive';
 import { QueryRemoveButtonDirective } from './query-builder/query-remove-button.directive';
 import { QueryEmptyWarningDirective } from './query-builder/query-empty-warning.directive';
+import { ChronoDateComponent } from './query-builder/chrono/chrono-date/chrono-date.component';
 
 @NgModule({
   imports: [
@@ -29,7 +30,8 @@ import { QueryEmptyWarningDirective } from './query-builder/query-empty-warning.
     QuerySwitchGroupDirective,
     QueryRemoveButtonDirective,
     QueryEmptyWarningDirective,
-    QueryArrowIconDirective
+    QueryArrowIconDirective,
+    ChronoDateComponent
   ],
   exports: [
     QueryBuilderComponent,
@@ -41,7 +43,8 @@ import { QueryEmptyWarningDirective } from './query-builder/query-empty-warning.
     QuerySwitchGroupDirective,
     QueryRemoveButtonDirective,
     QueryEmptyWarningDirective,
-    QueryArrowIconDirective
+    QueryArrowIconDirective,
+    ChronoDateComponent
   ]
 })
 export class QueryBuilderModule { }

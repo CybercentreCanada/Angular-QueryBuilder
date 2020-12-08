@@ -130,8 +130,8 @@
                   [disabled]="disabled" *ngSwitchCase="'string'" type="text">
                 <input [ngClass]="getClassNames('inputControl')" [(ngModel)]="rule.value" (ngModelChange)="changeInput()"
                   [disabled]="disabled" *ngSwitchCase="'number'" type="number">
-                <input [ngClass]="getClassNames('inputControl')" [(ngModel)]="rule.value" (ngModelChange)="changeInput()"
-                  [disabled]="disabled" *ngSwitchCase="'date'" type="date">
+                <chrono-date [ngClass]="getClassNames('inputControl')" [(ngModel)]="rule.value" (ngModelChange)="changeInput()"
+                  [disabled]="disabled" *ngSwitchCase="'date'"></chrono-date>
                 <input [ngClass]="getClassNames('inputControl')" [(ngModel)]="rule.value" (ngModelChange)="changeInput()"
                   [disabled]="disabled" *ngSwitchCase="'time'" type="time">
                 <select [ngClass]="getClassNames('inputControl')" [(ngModel)]="rule.value" (ngModelChange)="changeInput()"
