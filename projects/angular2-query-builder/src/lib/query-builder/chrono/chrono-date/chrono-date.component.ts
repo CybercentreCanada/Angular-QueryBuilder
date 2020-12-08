@@ -11,7 +11,10 @@ import * as chrono from 'chrono-node';
       <span class="icon-wrapper">
         <span class="calendar">
           <input #cal="ngModel" type="date" [(ngModel)]="date" (change)="calendarUpdate($event)">
-          <i class="material-icons">calendar_today</i>
+          <svg class="icon" viewBox="0 0 24 24" fill="black">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/>
+          </svg>
         </span>
       </span>
     </div>
@@ -22,19 +25,17 @@ import * as chrono from 'chrono-node';
   .calendar {
     display: inline-block;
     position: relative;
-    line-height: 0;
   }
 
   .calendar input[type="date"] {
     position: absolute;
     opacity: 0;
-    width: 100%;
-    height: 100%;
+    height: 24px;
     border: 0;
     overflow: hidden;
     cursor: pointer;
-    clip-path: inset(0 17px 0 0);
-    width: 40px;
+    clip-path: inset(0 17px 0 0); /* for firefox fix */
+    width: 41px; /* for firefox fix */
   }
 
   .calendar input[type="date"]::-webkit-calendar-picker-indicator {
@@ -50,14 +51,16 @@ import * as chrono from 'chrono-node';
     background-color: silver;
   }
 
-  .calendar .material-icons {
-    line-height: 21px;
+  .calendar .icon {
+    width: 24px;
+    height: 24px;
   }
   
   .icon-wrapper {
-    display:inline-flex;
+    display: inline-flex;
     position: absolute;
     right: 5px;
+    top: 4px;
   }
 
   .textbox {
@@ -65,6 +68,7 @@ import * as chrono from 'chrono-node';
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    min-height: 32px;
   }
 
   .input-wrapper {
@@ -78,7 +82,6 @@ import * as chrono from 'chrono-node';
     display: inline-flex;
     vertical-align: middle;
     align-items: center;
-    position: relative;
   }
   
   .chrono-alert {
